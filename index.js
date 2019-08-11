@@ -1,3 +1,5 @@
+
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Contutorialuctor OO pattern?',
@@ -12,5 +14,10 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  let temp = tutorials.map(tutorial => tutorial.split(" "))
+    .map(stringAsArray => stringAsArray.map(word => word[0].toUpperCase() + word.slice(1)))
+    .map(upcasedStringAsArray => upcasedStringAsArray.join(" "))
+  return temp
 }
+
+
